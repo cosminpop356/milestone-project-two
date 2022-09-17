@@ -10,15 +10,44 @@ body {
 .game-board {
     border: 1px solid black;
     width:800px;
-    height:500px;
+    height:600px;
+
 }
 
 .player-board {
     float:left;
     background-color: rgb(127,255,132, 0.3);
+    margin-left: 5em;
 }
 
 .computer-board {
     float:right;
     background-color: rgb(255,0,0, 0.3);
+    margin-right: 5em;
+}
+
+
+/** Player and computer scores **/
+
+.score {
+    font-size: 150%;
+}
+
+#player-score-number {
+    color: green;
+}
+
+#computer-score-number {
+    color: red;
+}
+
+#player-score-easy {
+    float:left;
+    clear:left;
+    padding-left: 23%;
+}
+
+#computer-score-easy {
+    float:right;
+    padding-right: 23%;
 }
