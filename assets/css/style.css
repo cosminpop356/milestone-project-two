@@ -7,10 +7,16 @@ body {
 
 /** Player and computer boards **/
 
-.game-board {
-    border: 1px solid black;
-    width:800px;
+#game-area {
     height:600px;
+    width:100%;
+    border:1px solid black;
+}
+
+.game-board {
+    position:relative;
+    width:45%;
+    height:100%;
 
 }
 
