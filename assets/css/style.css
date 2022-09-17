@@ -1,0 +1,24 @@
+body {
+    font-family: Kanit, sans-serif;
+    background-color: white;
+    text-align: center;
+    color:rgb(57, 61, 61)
+}
+
+/** Player and computer boards **/
+
+.game-board {
+    border: 1px solid black;
+    width:800px;
+    height:500px;
+}
+
+.player-board {
+    float:left;
+    background-color: rgb(127,255,132, 0.3);
+}
+
+.computer-board {
+    float:right;
+    background-color: rgb(255,0,0, 0.3);
+}
