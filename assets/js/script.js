@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let inputs = document.getElementsByTagName('input');
 
     for (let input of inputs) {
-        input.addEventListener("click", function(){
+        input.addEventListener("click", function playerInput(){
             if (this.getAttribute('data-type') === "rock"){
                document.getElementById('player-area').innerHTML = document.getElementsByClassName('player-choice')[0].innerHTML;
             } else if(this.getAttribute('data-type') === "paper"){
@@ -15,17 +15,8 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
     
+
 })
-
-
-function runGame() {
-    
-}
-
-function playerChoice() {
-    let choiceImage = document.getElementsByClassName('player-choice');
-    document.getElementById('player-area').innerHTML = choiceImage
-}
 
 
 /**
@@ -48,14 +39,48 @@ function computerChoice() {
     }
 
     return randomNumber;
-
 }
 
 function checkRoundWinner() {
-    let userChoice = document.getElementsByClassName('easy');
-    let computerChoice = computerChoice();
+    let userInput = document.getElementsByTagName('input').getAttribute("data-type");
+    let computerInput = document.getElementsByClassName('computer-choice');
+    
+    for (let i=0; i<computerInput.length; i++){
 
+        if (userInput === "rock" || computerInput[i].getAttribute('data-type') === "rock"){
+            alert("It's a tie! Choose again.");
 
+        } else if (userInput === "rock" || computerInput[i].getAttribute('data-type') === "paper"){
+            alert("Paper covers Rock! Computer wins!");
+            incrementScoreComputer();
+
+        } else if (userInput === "rock" || computerInput[i].getAttribute('data-type') === "scissors"){
+            alert("Rock curshes Scissors! You win!");
+            incrementScorePlayer();
+
+        } else if (userInput === "paper" || computerInput[i].getAttribute('data-type') === "rock"){
+            alert("Paper covers Rock! You win!");
+            incrementScorePlayer();
+
+        } else if (userInput === "paper" || computerInput[i].getAttribute('data-type') === "paper"){
+            alert("It's a tie! Choose again.");
+
+        } else if (userInput === "paper" || computerInput[i].getAttribute('data-type') === "scissors"){
+            alert("Scissors cuts Paper! Computer wins!");
+            incrementScoreComputer();
+
+        } else if (userInput === "scissors" || computerInput[i].getAttribute('data-type') === "rock"){
+            alert("Rock curshes Scissors! Computer wins!");
+            incrementScoreComputer();
+
+        } else if (userInput === "scissors" || computerInput[i].getAttribute('data-type') === "paper"){
+            alert("Scissors cuts Paper! You win!");
+            incrementScorePlayer();
+
+        } else if (userInput === "scissors" || computerInput[i].getAttribute('data-type') === "scissors"){
+            alert("It's a tie! Choose again.");
+        }
+    }
 
 }
 
@@ -63,16 +88,16 @@ function checkRoundWinner() {
  * Adds 1 to the player's score.
  */
 function incrementScorePlayer() {
-    let oldScore = parseInt(document.getElementById('player-score').innerText);
-    document.getElementById('player-score').innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById('player-score-number').innerText);
+    document.getElementById('player-score-number').innerText = ++oldScore;
 
 }
 /**
  * Adds 1 to the computer's score.
  */
 function incrementScoreComputer() {
-    let oldScore = parseInt(document.getElementById('computer-score').innerText);
-    document.getElementById('computer-score').innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById('computer-score-number').innerText);
+    document.getElementById('computer-score-number').innerText = ++oldScore;
 }
 
 function checkGameWinner() {
