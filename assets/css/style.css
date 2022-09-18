@@ -71,7 +71,7 @@ a {
     height:225px;
 }
 
-.easy:hover {
+#player:hover {
     transform:scaleX(-1);
 }
 
