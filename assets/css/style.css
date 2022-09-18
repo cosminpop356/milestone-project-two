@@ -1,3 +1,5 @@
+/** Global styles **/
+
 body {
     font-family: Kanit, sans-serif;
     background-color: white;
@@ -22,6 +24,8 @@ a {
     font-weight: bold;
     color:rgb(57, 61, 61);
 }
+
+
 
 /** Title page **/
 
@@ -63,7 +67,7 @@ a {
 }
 
 
-/** Start text and condition to win **/
+/** Start text and how to play popup **/
 
 #start-text {
     background-color: rgb(0, 0, 255, 0.2); 
@@ -73,11 +77,48 @@ a {
 }
 
 
-.startp {
+#start-text > p {
     font-weight: bold;
     font-size:150%;
 }
 
+i {
+    font-size:120%;
+    padding:5px;
+}
+
+i:hover{
+    color:white;
+}
+
+.how-to-image {
+    width: 100px;
+    height:100px;
+    padding:10px;
+}
+
+
+.how-to-play-popup {
+    background-color:white;
+    border: 5px solid grey;
+    border-radius:25px;
+    width:500px;
+    height:auto;
+    position: absolute;
+    top:25%;
+    left:37%;
+    z-index:1;
+    visibility: hidden;
+}
+
+.how-to-play-popup > p {
+    font-weight: bold;
+    font-size:150%;
+}
+
+.icon-container:hover + .how-to-play-popup{
+   visibility: visible;
+}
 
 
 /** Game area **/
@@ -86,6 +127,7 @@ a {
     height:550px;
     width:100%;
     margin: 0;
+    z-index: 2;
 }
 
 .game-board {
