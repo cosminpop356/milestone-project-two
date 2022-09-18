@@ -36,7 +36,7 @@ a {
 
 
 
-/** Player and computer boards **/
+/** Game area **/
 
 #game-area {
     height:550px;
@@ -64,9 +64,15 @@ a {
     margin-right: 5em;
 }
 
+/** style for easy mode**/
+
 .easy {
     width:225px;
     height:225px;
+}
+
+.easy:hover {
+    transform:scaleX(-1);
 }
 
 .rock-div1 {
@@ -87,6 +93,43 @@ a {
     left:40%;
 }
 
+/** Style for hard mode **/
+
+.hard {
+    height:135px;
+    width: 135px;
+}
+
+.rock-div2{
+    position:absolute;
+    top:20%;
+    left:30%;
+}
+
+.paper-div2{
+    position:absolute;
+    top:20%;
+    left:60%;
+}
+
+.scissors-div2{
+    position:absolute;
+    top:50%;
+    left:65%;
+}
+
+.lizard-div{
+    position:absolute;
+    top:70%;
+    left:45%;
+}
+
+.spock-div{
+    position:absolute;
+    top:50%;
+    left:20%;
+}
+
 
 /** Player and computer scores **/
 
@@ -102,13 +145,13 @@ a {
     color: red;
 }
 
-#player-score-easy {
+#player-score {
     float:left;
     clear:left;
     padding-left: 23%;
 }
 
-#computer-score-easy {
+#computer-score {
     float:right;
     padding-right: 23%;
 }
