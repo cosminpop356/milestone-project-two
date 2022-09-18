@@ -22,8 +22,32 @@
         </div>
 
         <div id="start-text">
-            <p class="startp">First to 3 points wins!</p>
-            <p class="startp">Choose to start!</p>
+
+            <p class="icon-container">How to play: <i class="fa-solid fa-circle-info"></i></p>
+            
+            <!--This div contains the rules of the game and only appears after hovering over the how to play info button-->
+            <div class="how-to-play-popup2" id="how-to-play">
+                <p>How the game works:</p>
+
+                <p  class="how-to-left"><img class="how-to-image2" src="assets/images/rock.png"> Rock crushes Scissors and Lizard 
+                    <img class="how-to-image2" src="/assets/images/scissors.png"><img class="how-to-image2" src="/assets/images/lizard.png"></p>
+
+                <p  class="how-to-left"><img class="how-to-image2" src="assets/images/scissors.png"> Scissors cuts Paper and decapitates Lizard 
+                    <img class="how-to-image2" src="/assets/images/paper.png"> <img class="how-to-image2" src="/assets/images/lizard.png"></p>
+
+                <p  class="how-to-left"><img class="how-to-image2" src="assets/images/paper.png"> Paper covers Rock and disproves Spock 
+                    <img class="how-to-image2" src="/assets/images/rock.png"><img class="how-to-image2" src="assets/images/spock.png"></p>
+
+                <p  class="how-to-right"><img class="how-to-image2" src="assets/images/lizard.png"> Lizard eats Paper and poisons Spock 
+                    <img class="how-to-image2" src="/assets/images/paper.png"><img class="how-to-image2" src="assets/images/spock.png"></p>
+
+                <p class="how-to-right"><img class="how-to-image2" src="assets/images/spock.png"> Spock vaoprizes Rock and smashes Scissors 
+                    <img class="how-to-image2" src="/assets/images/rock.png"><img class="how-to-image2" src="assets/images/scissors.png"></p>
+
+                <p>First to 3 points wins.</p>
+                <p>Click on an option to start!</p>
+            </div>
+
         </div>
 
         <div id="game-area">
@@ -85,5 +109,7 @@
         <footer></footer>
 
         <script src ='/assets/js/script.js'></script>
+        <!-- font awesome script-->
+        <script src="https://kit.fontawesome.com/1b04ddc89c.js" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -97,12 +97,12 @@ i:hover{
     padding:10px;
 }
 
-
+/** How to play popup on easy mode **/
 .how-to-play-popup {
     background-color:white;
     border: 5px solid grey;
     border-radius:25px;
-    width:500px;
+    width:auto;
     height:auto;
     position: absolute;
     top:25%;
@@ -119,6 +119,35 @@ i:hover{
 .icon-container:hover + .how-to-play-popup{
    visibility: visible;
 }
+
+/** How to play popup on hard mode**/
+
+.how-to-play-popup2 {
+    background-color:white;
+    border: 5px solid grey;
+    border-radius:25px;
+    width:auto;
+    height:650px;
+    position: absolute;
+    top:25%;
+    left:33%;
+    z-index:1;
+    visibility: hidden;
+}
+
+.how-to-play-popup2 > p {
+    font-weight: bold;
+    font-size:115%;
+}
+
+.how-to-image2 {
+    width:75px;
+    height:75px;
+}
+
+.icon-container:hover + .how-to-play-popup2{
+    visibility: visible;
+ }
 
 
 /** Game area **/
