@@ -9,15 +9,59 @@ body {
 }
 
 a {
-    font-size:150%;
     text-decoration:none;
+}
+
+.difficulty-select{
+    font-size:150%;
     color:brown;
 }
 
 .title2 {
     font-size:250%;
     font-weight: bold;
+    color:rgb(57, 61, 61);
 }
+
+/** Title page **/
+
+#title-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-page {
+    border: 5px solid grey;
+    border-radius:25px;
+    background-color: rgb(0, 0, 255, 0.2);
+    width:auto;
+    height:auto;
+    margin-top:5%;
+}
+
+.title1 {
+    font-size:250%;
+    padding:20px;
+}
+
+.title-p{
+    font-weight: bold;
+    font-size:150%;
+}
+
+.choose-difficulty > img {
+    width: 250px;
+    height: 200px;
+    border: 5px solid grey;
+    border-radius:25px;
+    margin:0 50 50 50;
+}
+
+.choose-difficulty > img:hover{
+    border: 5px solid black;
+}
+
 
 /** Start text and condition to win **/
 

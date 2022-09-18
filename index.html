@@ -10,16 +10,21 @@
         <link rel="stylesheet" href="/assets/css/style.css">
         <title>RPSLS</title>
     </head>
-    <body>
-        <div>
-            <h1 class="title1">Rock, Paper, Scissors, Lizard, Spock!</h1>
-        </div>
+    <body id="title-body">
+    <!--This is the first page when opening the website. You have to chooose a difficulty to start!-->
+        <div id="title-page"> 
+            <div>
+                <h1 class="title1">Rock, Paper, Scissors, Lizard, Spock!</h1>
+            </div>
 
-        <div id="difficulty">
-            <a href="easy.html">Easy</a>
-            <a href="hard.html">Hard</a>
+            <div>
+                <p class="title-p">Rock, Paper & Scissors (Easy)</p>
+                <a class ="difficulty-select choose-difficulty" href="easy.html"><img src="/assets/images/rockpaperscissors.png"></a>
+                
+                <p class="title-p">Rock, Paper, Scissors, Lizard & Spock (Hard)</p>
+                <a class ="difficulty-select choose-difficulty" href="hard.html"><img src="/assets/images/rockpaperscissorslizardspock.png"></a>
+            </div>
         </div>
-
         <script src ='/assets/js/script.js'></script>
     </body>
 </html>
