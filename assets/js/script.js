@@ -1,52 +1,67 @@
 
-document.addEventListener("DOMContentLoaded", function(){
+
     let inputs = document.getElementsByTagName('input');
 
     for (let input of inputs) {
-        input.addEventListener("click", function playerInput(){
+        input.addEventListener("click", function(){
 
             let number = computerChoice();
-            console.log(number);
 
             if (this.getAttribute('data-type') === "rock"){
                document.getElementById('player-area').innerHTML = document.getElementsByClassName('player-choice')[0].innerHTML;
 
                 if(number === 0){
                     setTimeout(function(){
-                    alert("It's a TIE! Try again.")}, 1000
-                    )
+                    alert("It's a TIE! Try again.")}, 10);
+                    updateDiv();
                 } else if (number === 1){
-                    alert("Paper covers Rock. Computer wins!")
+                    setTimeout(function(){
+                    alert("Paper covers Rock. Computer wins!")}, 10);
                     incrementScoreComputer();
+                    updateDiv();
                 } else {
-                    alert("Rock crushes Scissors. You win!")
+                    setTimeout(function(){
+                    alert("Rock crushes Scissors. You win!")}, 10);
                     incrementScorePlayer();
+                    updateDiv();
                 }
 
             } else if(this.getAttribute('data-type') === "paper"){
                 document.getElementById('player-area').innerHTML = document.getElementsByClassName('player-choice')[1].innerHTML;
 
                 if(number === 0){
-                    alert("Paper covers Rock. You win!")
+                    setTimeout(function(){
+                    alert("Paper covers Rock. You win!")}, 10);
                     incrementScorePlayer();
+                    updateDiv();
                 } else if (number === 1){
-                    alert("It's a TIE! Try again")
+                    setTimeout(function(){
+                    alert("It's a TIE! Try again")}, 10);
+                    updateDiv();
                 } else {
-                    alert("Scissors cuts Paper. Computer wins!")
+                    setTimeout(function(){
+                    alert("Scissors cuts Paper. Computer wins!")}, 10);
                     incrementScoreComputer();
+                    updateDiv();
                 }
 
             } else if (this.getAttribute('data-type') === "scissors"){
                 document.getElementById('player-area').innerHTML = document.getElementsByClassName('player-choice')[2].innerHTML;
 
                 if(number === 0){
-                    alert("Rock crushes Scissors. Computer wins!")
+                    setTimeout(function(){
+                    alert("Rock crushes Scissors. Computer wins!")}, 10);
                     incrementScoreComputer();
+                    updateDiv();
                 } else if (number === 1){
-                    alert("Scissors cuts Paper. You win!")
+                    setTimeout(function(){
+                    alert("Scissors cuts Paper. You win!")}, 10);
                     incrementScorePlayer();
+                    updateDiv();
                 } else {
-                    alert("It's a TIE! Try again")
+                    setTimeout(function(){
+                    alert("It's a TIE! Try again")}, 10);
+                    updateDiv();
                 }
             }
         
@@ -55,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
     
 
-})
+
 
 
 /**
@@ -80,9 +95,6 @@ function computerChoice() {
     return randomNumber;
 }
 
-function checkRoundWinner() {
-    
-}
 
 /**
  * Adds 1 to the player's score.
@@ -100,6 +112,8 @@ function incrementScoreComputer() {
     document.getElementById('computer-score-number').innerText = ++oldScore;
 }
 
-function checkGameWinner() {
-
+function updateDiv(){
+    setTimeout(function(){
+    $( "#game-area" ).load(window.location.href + " #game-area" )}, 1000
+    )
 }
