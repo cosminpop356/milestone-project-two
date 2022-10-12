@@ -1,9 +1,9 @@
 
-
+document.addEventListener("DOMContentLoaded", function(){
     let inputs = document.getElementsByTagName('input');
 
     for (let input of inputs) {
-        input.addEventListener("click", function(){
+        input.addEventListener("click", function runGame(){
 
             let number = computerChoice();
 
@@ -14,16 +14,19 @@
                     setTimeout(function(){
                     alert("It's a TIE! Try again.")}, 10);
                     updateDiv();
+                    
                 } else if (number === 1){
                     setTimeout(function(){
                     alert("Paper covers Rock. Computer wins!")}, 10);
                     incrementScoreComputer();
                     updateDiv();
+                
                 } else {
                     setTimeout(function(){
                     alert("Rock crushes Scissors. You win!")}, 10);
                     incrementScorePlayer();
                     updateDiv();
+                   
                 }
 
             } else if(this.getAttribute('data-type') === "paper"){
@@ -68,7 +71,8 @@
         
         })
     }
-    
+    return
+})
 
 
 
@@ -101,7 +105,9 @@ function computerChoice() {
  */
 function incrementScorePlayer() {
     let oldScore = parseInt(document.getElementById('player-score-number').innerText);
-    document.getElementById('player-score-number').innerText = ++oldScore;
+    let newScore = document.getElementById('player-score-number').innerText = ++oldScore;
+
+    return newScore;
 
 }
 /**
@@ -109,7 +115,22 @@ function incrementScorePlayer() {
  */
 function incrementScoreComputer() {
     let oldScore = parseInt(document.getElementById('computer-score-number').innerText);
-    document.getElementById('computer-score-number').innerText = ++oldScore;
+    let newScore = document.getElementById('computer-score-number').innerText = ++oldScore;
+
+    return newScore;
+}
+
+function checkGameWinner(){
+    let playerScore = incrementScorePlayer();
+    let computerScore = incrementScoreComputer();
+
+    if (playerScore === 3){
+        alert('You reached 3 points. You win!');
+        location.reload();
+    } else if (computerScore === 3){
+        alert('Computer reached 3 points. You lose! :(');
+        location.reload();
+    }
 }
 
 function updateDiv(){
