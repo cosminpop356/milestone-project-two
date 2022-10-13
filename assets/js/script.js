@@ -15,24 +15,24 @@ document.addEventListener("DOMContentLoaded", function(){
                 document.getElementById("player-scissors").style.display = 'none'; 
 
                 setTimeout(function(){
-                    document.getElementById("player-paper").style.display = 'block'
+                    document.getElementById("player-paper").style.display = 'block';
                     document.getElementById("player-scissors").style.display = 'block'; 
                 }, 1000);
                
                 if(number === 0){
                     setTimeout(function(){
-                        alert("It's a Tie! Try again.")
+                        alert("It's a Tie! Try again.");
                     }, 10);
                     
                 } else if (number === 1){
                     setTimeout(function(){
-                        alert("Paper covers Rock. Computer wins!")
+                        alert("Paper covers Rock. Computer aquired 1 point!");
                     }, 10);
                     incrementScoreComputer();
 
                 } else {
                     setTimeout(function(){
-                        alert("Rock crushes Scissors. You win!")
+                        alert("Rock crushes Scissors. You aquired 1 point!");
                     }, 10);
                     incrementScorePlayer();
                 }
@@ -42,23 +42,25 @@ document.addEventListener("DOMContentLoaded", function(){
                 document.getElementById("player-scissors").style.display = 'none'; 
                 
                 setTimeout(function(){
-                    document.getElementById("player-rock").style.display = 'block'
+                    document.getElementById("player-rock").style.display = 'block';
                     document.getElementById("player-scissors").style.display = 'block'; 
                 }, 1000);
 
                 if(number === 0){
                     setTimeout(function(){
-                    alert("Paper covers Rock. You win!")}, 10);
-                    
+                        alert("Paper covers Rock. You aquired 1 point!");
+                    }, 10);
                     incrementScorePlayer();
                     
                 } else if (number === 1){
                     setTimeout(function(){
-                    alert("It's a TIE! Try again")}, 10);
+                        alert("It's a Tie! Try again");
+                    }, 10);
                     
                 } else {
                     setTimeout(function(){
-                    alert("Scissors cuts Paper. Computer wins!")}, 10);
+                        alert("Scissors cuts Paper. Computer aquired 1 point!");
+                    }, 10);
                     incrementScoreComputer();
                    
                 }
@@ -74,19 +76,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
                 if(number === 0){
                     setTimeout(function(){
-                        alert("Rock crushes Scissors. Computer wins!")
+                        alert("Rock crushes Scissors. Computer aquired 1 point!");
                     }, 10);
                     incrementScoreComputer();
                     
                 } else if (number === 1){
                     setTimeout(function(){
-                        alert("Scissors cuts Paper. You win!")
+                        alert("Scissors cuts Paper. You aquired 1 point!");
                     }, 10);
                     incrementScorePlayer();
                    
                 } else {
                     setTimeout(function(){
-                        alert("It's a TIE! Try again")
+                        alert("It's a Tie! Try again");
                     }, 10);  
                 }
             }
@@ -143,6 +145,9 @@ function computerChoice() {
 function incrementScorePlayer() {
     let oldScore = parseInt(document.getElementById('player-score-number').innerText);
     document.getElementById('player-score-number').innerText = ++oldScore;
+
+    let oldScoreHard = parseInt(document.getElementById('player-score-number-hard').innerText);
+    document.getElementById('player-score-number-hard').innerText = ++oldScoreHard;
 }
 
 /**
@@ -151,6 +156,9 @@ function incrementScorePlayer() {
 function incrementScoreComputer() {
     let oldScore = parseInt(document.getElementById('computer-score-number').innerText);
     document.getElementById('computer-score-number').innerText = ++oldScore;
+
+    let oldScoreHard = parseInt(document.getElementById('player-score-number-hard').innerText);
+    document.getElementById('player-score-number-hard').innerText = ++oldScoreHard;
 }
 
 
@@ -161,22 +169,21 @@ function checkGameWinner(){
     let playerScore = parseInt(document.getElementById('player-score-number').innerText);
     let computerScore = parseInt(document.getElementById('computer-score-number').innerText);
 
-    if (playerScore === 3){
+    let playerScoreHard = parseInt(document.getElementById('player-score-number-hard').innerText);
+    let computerScoreHard = parseInt(document.getElementById('computer-score-number-hard').innerText);
+
+
+    if (playerScore === 3 || playerScoreHard === 3){
         setTimeout(function(){
             alert("You reached 3 points. You win!");
             location.reload();
         }, 10);
-
-        
-        
-    } else if (computerScore === 3){
+   
+    } else if (computerScore === 3 || computerScoreHard === 3){
         setTimeout(function(){
             alert("Computer reached 3 points. You lose!");
             location.reload();
         }, 10);
-
-        
-        
     }
 }
 

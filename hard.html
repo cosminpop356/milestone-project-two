@@ -6,9 +6,9 @@
 
         <!--google fonts link-->
         <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    
+        
         <link rel="stylesheet" href="/assets/css/style.css">
-        <title>Document</title>
+        <title>Rock Paper Scissors Lizard Spock</title>
     </head>
     <body>
         <div>
@@ -17,16 +17,15 @@
 
         <div>
             <!--this anchor sends the user to the first page to choose another difficulty-->
-            <a class="difficulty-select" href="index.html">Change Difficulty</a>
-
+            <a class ="difficulty-select" href="index.html">Change Difficulty</a>
         </div>
 
-        <div id="start-text">
+        <div id="start-text-hard">
 
             <p class="icon-container">How to play: <i class="fa-solid fa-circle-info"></i></p>
             
             <!--This div contains the rules of the game and only appears after hovering over the how to play info button-->
-            <div class="how-to-play-popup2" id="how-to-play">
+            <div class="how-to-play-popup2" id="how-to-play-hard">
                 <p>Rules:</p>
 
                 <p  class="how-to-left"><img class="how-to-image2" src="assets/images/rock.png"> Rock crushes Scissors and Lizard 
@@ -52,30 +51,30 @@
         
         
         <!--main game area-->
-        <div id="game-area">
+        <div id="game-area-hard">
 
             <!--player board-->
             <div  class="game-board player-board">
                 <h2>Player Board</h2>
 
                 <div class="rock-div2">
-                    <input id="player" class="rock hard" type="image" name="rock" src="/assets/images/rock.png" alt="rock">
+                    <input id="player-rock-hard" class="rock hard player" type="image" data-type = "rock" name="rock" src="/assets/images/rock.png" alt="rock">
                 </div>
 
                 <div class="paper-div2">
-                    <input id="player" class="paper hard" type="image" name="paper" src="/assets/images/paper.png"  alt="paper">
+                    <input id="player-paper-hard" class="paper hard player" type="image" data-type = "paper" name="paper" src="/assets/images/paper.png"  alt="paper">
                 </div>
                 
                 <div class="scissors-div2">
-                    <input id="player" class="scissors hard" type="image" name="scissors" src="/assets/images/scissors.png" alt="scissors">
+                    <input id="player-scissors-hard" class="scissors hard player" type="image" data-type = "scissors" name="scissors" src="/assets/images/scissors.png" alt="scissors">
                 </div>
 
                 <div class="lizard-div">
-                    <input id="player" class="lizard hard" type="image" name="lizard" src="/assets/images/lizard.png" alt="lizard">
+                    <input id="player-lizard-hard" class="lizard hard player" type="image" data-type = "lizard" name="lizard" src="/assets/images/lizard.png" alt="lizard">
                 </div>
 
                 <div class="spock-div">
-                    <input id="player" class="spock hard" type="image" name="spock" src="/assets/images/spock.png" alt="spock">
+                    <input id="player-spock-hard" class="spock hard player" type="image" data-type = "spock" name="spock" src="/assets/images/spock.png" alt="spock">
                 </div>
 
             </div>
@@ -108,12 +107,12 @@
 
 
         <!--player and computer scores-->
-        <div id="player-score" class="score">Score: <span id="player-score-number">0</span></div>
+        <div id="player-score-hard" class="score">Score: <span id="player-score-number-hard">0</span></div>
 
-        <div id="computer-score" class="score">Score: <span id="computer-score-number">0</span></div>
+        <div id="computer-score-hard" class="score">Score: <span id="computer-score-number-hard">0</span></div>
 
 
-        <!--javascipt link-->
+        <!--javascript link-->
         <script src ='/assets/js/script.js'></script>
 
         <!-- font awesome script-->
