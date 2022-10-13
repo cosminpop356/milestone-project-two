@@ -75,11 +75,28 @@ The rules for the hard diffculty
 
 ## Testing
 
+### Bugs
+
+There are no bugs to report.
+
+
 ### Validator Testing
     
-    -HTML
-        - No errors were returend when passing through the official.
-    -CSS
-        - No errors were returned when passing through the official.
-    -Javascript
-        - Some errors were returned when passing both js files through the official Jshint validator
+- HTML
+    - No errors were returend when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcosminpop356.github.io%2Fmilestone-project-two%2F).
+- CSS
+    - No errors were returned when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcosminpop356.github.io%2Fmilestone-project-two&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+- Javascript
+    - Some errors were returned when passing both js files through the official [Jshint validator](https://jshint.com) that still remain.
+        - The following metrics were returned for **script.js**:
+            - There are 23 functions in this file.
+            - Function with the largest signature take 0 arguments, while the median is 0.
+            - Largest function has 30 statements in it, while the median is 2.
+            - The most complex function has a cyclomatic complexity value of 10 while the median is 1.
+
+
+        - The following metrics were returned for **script2.js**:
+            - There are 43 functions in this file.
+            - Function with the largest signature take 0 arguments, while the median is 0.
+            - Largest function has 78 statements in it, while the median is 1.
+            - The most complex function has a cyclomatic complexity value of 26 while the median is 1.
