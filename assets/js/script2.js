@@ -222,9 +222,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }
             checkGameWinner();
-        })
+        });
     }
-})
+});
 
 /**
  * Gets a random number that matches a choice and

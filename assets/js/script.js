@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }
             checkGameWinner();
-        })
+        });
     }
-})
+});
 
 /**
  * Gets a random number that matches a choice and
@@ -104,9 +104,7 @@ document.addEventListener("DOMContentLoaded", function(){
 function computerChoice() {
     
     let randomNumber = Math.floor(Math.random() * 3);
-
     if (randomNumber === 0){
-
         document.getElementById("computer-paper").style.display = 'none';
         document.getElementById("computer-scissors").style.display = 'none'; 
 
@@ -176,6 +174,5 @@ function checkGameWinner(){
         }, 10);
     }
 }
-
 
 
