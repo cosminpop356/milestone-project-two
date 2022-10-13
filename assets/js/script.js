@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }
         
-        
+            checkGameWinner();
         })
     }
     
-    checkGameWinner();
+    
 
 })
 
@@ -160,10 +160,18 @@ function checkGameWinner(){
     let computerScore = parseInt(document.getElementById('computer-score-number').innerText);
 
     if (playerScore === 3){
-        alert('You reached 3 points. You win!');
+        setTimeout(function(){
+            alert("You reached 3 points. You win!")
+        }, 10);
+        
+        location.reload();
         
     } else if (computerScore === 3){
-        alert('Computer reached 3 points. You lose! :(');
+        setTimeout(function(){
+            alert("Computer reached 3 points. You lose!")
+        }, 10);
+
+        location.reload();
         
     }
 }
