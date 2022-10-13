@@ -103,6 +103,21 @@ There are no bugs to report.
 
 ### Accessibility
 
-I ran a lighthouse accessibility test from the chrome dev tools.
+I ran a lighthouse accessibility test from the chrome dev tools and these are the results:
 
 ![](assets/images/accessibility.png)
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab.
+  - Click on the pages option from the left side list.
+  - From the branch section drop-down menu, select the Master Branch.
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - https://cosminpop356.github.io/milestone-project-two/
+
+## Credits
+
+### Media 
+ - All the icons for the options of the game were taken from [PNG Wing](https://www.pngwing.com/en/free-png-iiamd) and then cut by me.
