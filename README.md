@@ -100,3 +100,9 @@ There are no bugs to report.
             - Function with the largest signature take 0 arguments, while the median is 0.
             - Largest function has 78 statements in it, while the median is 1.
             - The most complex function has a cyclomatic complexity value of 26 while the median is 1.
+
+### Accessibility
+
+I ran a lighthouse accessibility test from the chrome dev tools.
+
+![](assets/images/accessibility.png)
