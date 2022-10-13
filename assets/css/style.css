@@ -252,11 +252,11 @@ i:hover{
     font-size: 150%;
 }
 
-#player-score-number {
+#player-score-number, #player-score-number-hard {
     color: green;
 }
 
-#computer-score-number {
+#computer-score-number, #computer-score-number-hard {
     color: red;
 }
 
@@ -266,7 +266,7 @@ i:hover{
     padding-left: 23%;
 }
 
-#computer-score, #player-score-hard {
+#computer-score, #computer-score-hard {
     float:right;
     padding-right: 23%;
 }

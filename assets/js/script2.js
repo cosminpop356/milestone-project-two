@@ -12,11 +12,15 @@ document.addEventListener("DOMContentLoaded", function(){
                 /* The code below hides the other choices after user input 
                 and makes them show after 1 second. This code repeats for each choice the user has.*/
                 document.getElementById("player-paper-hard").style.display = 'none';
-                document.getElementById("player-scissors-hard").style.display = 'none'; 
+                document.getElementById("player-scissors-hard").style.display = 'none';
+                document.getElementById("player-lizard-hard").style.display = 'none'; 
+                document.getElementById("player-spock-hard").style.display = 'none'; 
 
                 setTimeout(function(){
                     document.getElementById("player-paper-hard").style.display = 'block';
-                    document.getElementById("player-scissors-hard").style.display = 'block'; 
+                    document.getElementById("player-scissors-hard").style.display = 'block';
+                    document.getElementById("player-lizard-hard").style.display = 'block'; 
+                    document.getElementById("player-spock-hard").style.display = 'block'; 
                 }, 1000);
                
                 if(number === 0){
@@ -30,50 +34,79 @@ document.addEventListener("DOMContentLoaded", function(){
                     }, 10);
                     incrementScoreComputer();
 
-                } else {
+                } else if (number === 2){
                     setTimeout(function(){
                         alert("Rock crushes Scissors. You aquired 1 point!");
                     }, 10);
                     incrementScorePlayer();
+                } else if (number === 3){
+                    setTimeout(function(){
+                        alert("Rock crushes Lizard. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+                } else {
+                    setTimeout(function(){
+                        alert("Spock vaporizes Rock. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
                 }
 
             } else if(this.getAttribute('data-type') === "paper"){
                 document.getElementById("player-rock-hard").style.display = 'none';
-                document.getElementById("player-scissors-hard").style.display = 'none'; 
-                
+                document.getElementById("player-scissors-hard").style.display = 'none';
+                document.getElementById("player-lizard-hard").style.display = 'none'; 
+                document.getElementById("player-spock-hard").style.display = 'none'; 
+
                 setTimeout(function(){
                     document.getElementById("player-rock-hard").style.display = 'block';
-                    document.getElementById("player-scissors-hard").style.display = 'block'; 
+                    document.getElementById("player-scissors-hard").style.display = 'block';
+                    document.getElementById("player-lizard-hard").style.display = 'block'; 
+                    document.getElementById("player-spock-hard").style.display = 'block'; 
                 }, 1000);
-
+               
                 if(number === 0){
                     setTimeout(function(){
                         alert("Paper covers Rock. You aquired 1 point!");
                     }, 10);
                     incrementScorePlayer();
-                    
+
                 } else if (number === 1){
-                    setTimeout(function(){
-                        alert("It's a Tie! Try again");
-                    }, 10);
-                    
-                } else {
                     setTimeout(function(){
                         alert("Scissors cuts Paper. Computer aquired 1 point!");
                     }, 10);
                     incrementScoreComputer();
-                   
+
+                } else if (number === 2){
+                    setTimeout(function(){
+                        alert("It's a Tie. Try again!");
+                    }, 10);
+
+                } else if (number === 3){
+                    setTimeout(function(){
+                        alert("Lizard eats Paper. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+
+                } else {
+                    setTimeout(function(){
+                        alert("Paper disproves Spock. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
                 }
 
             } else if (this.getAttribute('data-type') === "scissors"){
                 document.getElementById("player-paper-hard").style.display = 'none';
-                document.getElementById("player-rock-hard").style.display = 'none'; 
-                
+                document.getElementById("player-rock-hard").style.display = 'none';
+                document.getElementById("player-lizard-hard").style.display = 'none'; 
+                document.getElementById("player-spock-hard").style.display = 'none'; 
+
                 setTimeout(function(){
                     document.getElementById("player-paper-hard").style.display = 'block';
-                    document.getElementById("player-rock-hard").style.display = 'block'; 
+                    document.getElementById("player-rock-hard").style.display = 'block';
+                    document.getElementById("player-lizard-hard").style.display = 'block'; 
+                    document.getElementById("player-spock-hard").style.display = 'block'; 
                 }, 1000);
-
+               
                 if(number === 0){
                     setTimeout(function(){
                         alert("Rock crushes Scissors. Computer aquired 1 point!");
@@ -85,11 +118,107 @@ document.addEventListener("DOMContentLoaded", function(){
                         alert("Scissors cuts Paper. You aquired 1 point!");
                     }, 10);
                     incrementScorePlayer();
-                   
+
+                } else if (number === 2){
+                    setTimeout(function(){
+                        alert("It's a Tie. Try again!");
+                    }, 10);
+        
+                } else if (number === 3){
+                    setTimeout(function(){
+                        alert("Scissors decapitates Lizard. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+
                 } else {
                     setTimeout(function(){
-                        alert("It's a Tie! Try again");
-                    }, 10);  
+                        alert("Spock vaporizes Scissors. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+                }
+            } else if (this.getAttribute('data-type') === "lizard"){
+                document.getElementById("player-paper-hard").style.display = 'none';
+                document.getElementById("player-scissors-hard").style.display = 'none';
+                document.getElementById("player-rock-hard").style.display = 'none'; 
+                document.getElementById("player-spock-hard").style.display = 'none'; 
+
+                setTimeout(function(){
+                    document.getElementById("player-paper-hard").style.display = 'block';
+                    document.getElementById("player-scissors-hard").style.display = 'block';
+                    document.getElementById("player-rock-hard").style.display = 'block'; 
+                    document.getElementById("player-spock-hard").style.display = 'block'; 
+                }, 1000);
+               
+                if(number === 0){
+                    setTimeout(function(){
+                        alert("Rock crushes Lizard. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+                    
+                } else if (number === 1){
+                    setTimeout(function(){
+                        alert("Lizard eats Paper. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+
+                } else if (number === 2){
+                    setTimeout(function(){
+                        alert("Scissors decapitates Lizard. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+
+                } else if (number === 3){
+                    setTimeout(function(){
+                        alert("It's a Tie. Try again!");
+                    }, 10);
+
+                } else {
+                    setTimeout(function(){
+                        alert("Lizard poisons Spock. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+                }
+            } else if (this.getAttribute('data-type') === "spock"){
+                document.getElementById("player-paper-hard").style.display = 'none';
+                document.getElementById("player-scissors-hard").style.display = 'none';
+                document.getElementById("player-lizard-hard").style.display = 'none'; 
+                document.getElementById("player-rock-hard").style.display = 'none'; 
+
+                setTimeout(function(){
+                    document.getElementById("player-paper-hard").style.display = 'block';
+                    document.getElementById("player-scissors-hard").style.display = 'block';
+                    document.getElementById("player-lizard-hard").style.display = 'block'; 
+                    document.getElementById("player-rock-hard").style.display = 'block'; 
+                }, 1000);
+               
+                if(number === 0){
+                    setTimeout(function(){
+                        alert("Spock vaporizes Rock. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+                    
+                } else if (number === 1){
+                    setTimeout(function(){
+                        alert("Paper disproves Spock. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+
+                } else if (number === 2){
+                    setTimeout(function(){
+                        alert("Spock vaporizes Scissors. You aquired 1 point!");
+                    }, 10);
+                    incrementScorePlayer();
+
+                } else if (number === 3){
+                    setTimeout(function(){
+                        alert("Lizard poisons Spock. Computer aquired 1 point!");
+                    }, 10);
+                    incrementScoreComputer();
+
+                } else {
+                    setTimeout(function(){
+                        alert("It's a Tie. Try again!");
+                    }, 10);
                 }
             }
             checkGameWinner();
@@ -103,38 +232,76 @@ document.addEventListener("DOMContentLoaded", function(){
  */
 function computerChoice() {
     
-    let randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 5);
 
     if (randomNumber === 0){
 
         document.getElementById("computer-paper-hard").style.display = 'none';
-        document.getElementById("computer-scissors-hard").style.display = 'none'; 
+        document.getElementById("computer-scissors-hard").style.display = 'none';
+        document.getElementById("computer-lizard-hard").style.display = 'none'; 
+        document.getElementById("computer-spock-hard").style.display = 'none'; 
 
         setTimeout(function(){
             document.getElementById("computer-paper-hard").style.display = 'block';
-            document.getElementById("computer-scissors-hard").style.display = 'block'; 
+            document.getElementById("computer-scissors-hard").style.display = 'block';
+            document.getElementById("computer-lizard-hard").style.display = 'block'; 
+            document.getElementById("computer-spock-hard").style.display = 'block'; 
         }, 1000);
 
     } else if (randomNumber === 1) {
 
         document.getElementById("computer-rock-hard").style.display = 'none';
-        document.getElementById("computer-scissors-hard").style.display = 'none'; 
-                
+        document.getElementById("computer-scissors-hard").style.display = 'none';
+        document.getElementById("computer-lizard-hard").style.display = 'none'; 
+        document.getElementById("computer-spock-hard").style.display = 'none'; 
+
         setTimeout(function(){
             document.getElementById("computer-rock-hard").style.display = 'block';
-            document.getElementById("computer-scissors-hard").style.display = 'block'; 
+            document.getElementById("computer-scissors-hard").style.display = 'block';
+            document.getElementById("computer-lizard-hard").style.display = 'block'; 
+            document.getElementById("computer-spock-hard").style.display = 'block'; 
         }, 1000);
 
     } else if (randomNumber === 2) {
 
         document.getElementById("computer-paper-hard").style.display = 'none';
-        document.getElementById("computer-rock-hard").style.display = 'none'; 
-                
+        document.getElementById("computer-rock-hard").style.display = 'none';
+        document.getElementById("computer-lizard-hard").style.display = 'none'; 
+        document.getElementById("computer-spock-hard").style.display = 'none'; 
+
         setTimeout(function(){
             document.getElementById("computer-paper-hard").style.display = 'block';
+            document.getElementById("computer-rock-hard").style.display = 'block';
+            document.getElementById("computer-lizard-hard").style.display = 'block'; 
+            document.getElementById("computer-spock-hard").style.display = 'block'; 
+        }, 1000);
+    } else if (randomNumber === 3) {
+
+        document.getElementById("computer-paper-hard").style.display = 'none';
+        document.getElementById("computer-scissors-hard").style.display = 'none';
+        document.getElementById("computer-rock-hard").style.display = 'none'; 
+        document.getElementById("computer-spock-hard").style.display = 'none'; 
+
+        setTimeout(function(){
+            document.getElementById("computer-paper-hard").style.display = 'block';
+            document.getElementById("computer-scissors-hard").style.display = 'block';
+            document.getElementById("computer-rock-hard").style.display = 'block'; 
+            document.getElementById("computer-spock-hard").style.display = 'block'; 
+        }, 1000);
+    } else if (randomNumber === 4) {
+
+        document.getElementById("computer-paper-hard").style.display = 'none';
+        document.getElementById("computer-scissors-hard").style.display = 'none';
+        document.getElementById("computer-lizard-hard").style.display = 'none'; 
+        document.getElementById("computer-rock-hard").style.display = 'none'; 
+
+        setTimeout(function(){
+            document.getElementById("computer-paper-hard").style.display = 'block';
+            document.getElementById("computer-scissors-hard").style.display = 'block';
+            document.getElementById("computer-lizard-hard").style.display = 'block'; 
             document.getElementById("computer-rock-hard").style.display = 'block'; 
         }, 1000);
-    } 
+    }
     
     return randomNumber;
 }
